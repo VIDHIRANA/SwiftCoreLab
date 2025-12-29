@@ -271,3 +271,6 @@ func demonstrateUnowned() {
 // demonstrateUnowned()
 // // You will see "Parent Main Parent deinitialized" and "Child First Child deinitialized"
 // // are printed, showing safe unowned usage in this specific lifetime context.
+
+
+/*Difference between weak and unowned: weak becomes nil if object deallocates unowned assumes object will never die — unsafe if it does */

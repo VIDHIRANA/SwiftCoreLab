@@ -32,8 +32,9 @@ func demonstrateStructCopyBehavior() {
     var copiedUser = originalUser
     
     // Mutate the copy.
-    copiedUser.name = "Bob"
     copiedUser.age = 25
+    print("originalUser:", originalUser.age) // 30
+        print("copiedUser.age:", copiedUser.age) // 25
     
     // At this point:
     // - `originalUser.name` is still "Alice"
@@ -79,3 +80,10 @@ func incrementAgeInPlace(user: inout User) {
 // You can call these functions from somewhere else, e.g. in main or in tests:
 // demonstrateStructCopyBehavior()
 // demonstrateStructPassingToFunction()
+
+/*Why are structs preferred in Swift?
+ 
+ ✅ Because they are value types
+ ✅ They avoid shared state bugs
+ ✅ Performance benefits in many cases
+ */

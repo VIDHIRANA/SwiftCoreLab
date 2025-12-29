@@ -44,6 +44,9 @@ func demonstrateClassReferenceSharing() {
     sharedReference.username = "alice_updated"
     sharedReference.isActive = false
     
+    print("originalAccount.username: ", originalAccount.username) // alice_updated
+    print("haredReference.username:", sharedReference.username) // alice_updated
+    
     // At this point:
     // - `originalAccount.username` is "alice_updated"
     // - `sharedReference.username` is also "alice_updated"
