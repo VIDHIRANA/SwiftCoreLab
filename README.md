@@ -1,16 +1,13 @@
 # SwiftCoreLab 🚀
+# Phase 1 The Core Foundations. 🧱🍎
 
 Welcome to SwiftCoreLab, a dedicated repository for mastering the deep internals of the Swift programming language and iOS Core Foundations.
 
 This repository is part of the iOS Swift Revision Series, designed to bridge the gap between "knowing syntax" and "engineering scalable solutions." Instead of full applications, this lab focuses on isolated, professionalgrade implementations of core concepts that every Senior iOS Developer must master.
 
-
-
  🎯 Purpose
 
 The goal of this repo is to demonstrate a deep understanding of Swift's memory management, type system, and concurrency models. Each module is documented with the "Why" behind the implementation, making it a perfect reference for technical interviews and peer reviews.
-
-
 
  📂 Repository Structure
 
@@ -27,9 +24,7 @@ SwiftCoreLab/
 └── 📜 README.md              # Project documentation
 ```
 
-
-
- 🚀 Phase 1: Core Modules
+# 🚀 Phase 1: Core Modules
 
 # 1\. Value vs. Reference Types (`/ValueVsReference`)
 
@@ -49,11 +44,36 @@ SwiftCoreLab/
   * Objective: Proving how `self` is captured in a closure and using `[weak self]` to prevent memory leaks. Includes explanations on when `unowned` is dangerous.
   * Key Files: `CaptureLists.swift`.
 
+# Your Goal : Complete these 3 critical modules.
 
+1️⃣ Value vs. Reference Types ⚖️
+  * File: StructExamples.swift & ClassExamples.swift
+
+  * Task: Implement a struct User and a class UserAccount.
+
+  * The Challenge: Modify values in both and use comments to explain the copy behavior vs. shared reference. No print-only demos—explain the "why"!
+
+2️⃣ ARC & Retain Cycles 🛡️
+  * File: RetainCycleDemo.swift
+
+  * Task: Create two classes that reference each other to intentionally trigger a memory leak.
+
+  * The Fix: Implement weak to break the cycle.
+
+  * The Challenge: Add comments explaining exactly why the leak happened and why weak was the solution.
+
+3️⃣ Closures & Capture Lists (Most Important!) 🧠
+File: CaptureLists.swift
+
+  * Task: Create a closure capturing self.
+
+  * The Challenge: Demonstrate a retain cycle and fix it using [weak self].
+
+  * Pro Tip: Explain in your comments when unowned becomes dangerous!
 
  🧼 Senior Code Quality Rules
 
-Every file in this repository adheres to highlevel engineering standards:
+# Every file in this repository adheres to highlevel engineering standards:
 
   * Meaningful Naming: No ambiguous variables; code is selfdocumenting.
   * Zero Force Unwraps: Safety is prioritized via `if let` and `guard`.
@@ -61,13 +81,11 @@ Every file in this repository adheres to highlevel engineering standards:
   * No Massive Functions: Logic is broken down into small, testable units.
 
 
-
  💡 How to Use This Lab
 
 1.  Clone the repo: `git clone https://github.com/VIDHIRANA/SwiftCoreLab.git`
 2.  Open in Xcode: Simply drag the files into a Swift Playground or a commandline tool project.
 3.  Read the Comments: The value of this repo lies in the documentation within the files.
-
 
 
  🤝 Join the Journey
